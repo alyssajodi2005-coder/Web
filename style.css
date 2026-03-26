@@ -57,10 +57,10 @@ body {
 .intro {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: var(--light-text);
-  padding: 110px 40px;
+  padding: 60px 40px;
   text-align: center;
   border-radius: 60px;
-  margin: 96px 24px 56px;
+  margin: 40px 40px 40px;
   box-shadow: var(--shadow-soft);
 }
 
@@ -356,6 +356,12 @@ body {
   font-size: 0.9rem;
   color: rgba(51, 51, 51, 0.7);
   margin-top: 4px;
+}
+
+.volunteer-btn {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
 }
 
 .contact-link {
