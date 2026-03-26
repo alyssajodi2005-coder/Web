@@ -5,24 +5,35 @@
   --accent-color2: #6ea8c7;
   --card-color: #7ea99a;
   --surface-color: #fff9ef;
+  --surface-soft: #eef5f1;
   --text-color: #333;
   --warm-bg: #f6efe2;
   --light-text: #fffaf0;
+  --border-color: rgba(72, 106, 64, 0.18);
+  --shadow-soft: 0 10px 30px rgba(72, 106, 64, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Copperplate", serif;
+  font-family: "Lato", sans-serif;
   background-color: var(--warm-bg);
   margin: 0;
+  color: var(--text-color);
+  background-image: linear-gradient(180deg, rgba(184, 220, 235, 0.08), transparent 18%);
 }
 
 .navbar {
-  background-color: var(--secondary-color);
+  background-color: rgba(72, 106, 64, 0.95);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-brand {
-  font-family: "Copperplate", serif;
+  font-family: "Playfair Display", serif;
   color: var(--light-text) !important;
+  letter-spacing: 0.02em;
 }
 
 .navbar-toggler {
@@ -35,6 +46,8 @@ body {
 
 .nav-link {
   color: var(--light-text) !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
 }
 
 .nav-link:hover {
@@ -44,18 +57,102 @@ body {
 .intro {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: var(--light-text);
-  font-weight: bold;
-  padding: 125px 0;
+  padding: 110px 40px;
   text-align: center;
-  border-radius: 80px;
-  margin: 25px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  border-radius: 60px;
+  margin: 96px 24px 56px;
+  box-shadow: var(--shadow-soft);
 }
 
 .intro:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+}
+
+.statement {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-mark {
+  margin-bottom: 24px;
+}
+
+.hero-house {
+  position: relative;
+  width: 132px;
+  height: 118px;
+  margin: 0 auto 16px;
+}
+
+.roof {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  width: 84px;
+  height: 84px;
+  background: rgba(255, 250, 240, 0.22);
+  border: 3px solid rgba(255, 250, 240, 0.7);
+  transform: rotate(45deg);
+  border-radius: 16px;
+}
+
+.home-body {
+  position: absolute;
+  bottom: 8px;
+  left: 36px;
+  width: 60px;
+  height: 58px;
+  background: rgba(255, 250, 240, 0.24);
+  border: 3px solid rgba(255, 250, 240, 0.75);
+  border-radius: 14px;
+}
+
+.tree {
+  position: absolute;
+  bottom: 12px;
+  width: 20px;
+  height: 44px;
+}
+
+.tree::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  background: rgba(184, 220, 235, 0.9);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.tree::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 5px;
+  height: 20px;
+  background: rgba(255, 250, 240, 0.8);
+  transform: translateX(-50%);
+  border-radius: 999px;
+}
+
+.tree-left {
+  left: 4px;
+}
+
+.tree-right {
+  right: 4px;
+}
+
+.hero-tag {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.95;
 }
 
 .intro h1 {
@@ -74,19 +171,44 @@ body {
 }
 
 #mission,
-#programs {
-  background: var(--warm-bg);
+#programs,
+#gallery,
+#volunteer,
+#donate,
+#impact,
+#contact {
+  scroll-margin-top: 90px;
+  max-width: 980px;
+  margin: 0 auto 28px;
+  padding: 42px;
+  border-radius: 32px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+#mission,
+#programs,
+#gallery {
+  background: var(--surface-color);
   color: var(--secondary-color);
   text-align: center;
-  padding: 40px;
 }
 
 #mission p,
-#programs p {
+#programs p,
+#gallery p {
   font-family: "Lato", sans-serif;
   max-width: 900px;
   margin: 0 auto 14px;
   line-height: 1.8;
+}
+
+#mission h2,
+#programs h2,
+#gallery h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
 }
 
 .btn-donate {
@@ -132,7 +254,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  padding: 40px;
+  padding: 12px 24px 20px;
+  max-width: 1100px;
+  margin: 0 auto 28px;
 }
 
 .card {
@@ -142,9 +266,11 @@ body {
   color: var(--light-text);
   font-size: 15px;
   margin: 10px;
-  padding: 20px;
+  padding: 24px;
   flex: 1 1 300px;
-  border: none;
+  border: 1px solid rgba(255, 250, 240, 0.2);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
 .card h2 {
@@ -153,34 +279,21 @@ body {
 }
 
 .card:hover {
-  background: var(--surface-color);
-  color: var(--text-color);
-  transform: translateY(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-#volunteer,
-#donate,
-#impact,
-#contact {
-  max-width: 950px;
-  margin: 28px auto;
-  padding: 38px 42px;
-  border-radius: 28px;
-  box-shadow: 0 16px 35px rgba(72, 106, 64, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 26px rgba(72, 106, 64, 0.16);
+  opacity: 0.96;
 }
 
 #volunteer,
 #impact {
-  background: linear-gradient(135deg, rgba(140, 199, 157, 0.18), rgba(172, 230, 255, 0.28));
+  background: linear-gradient(135deg, rgba(142, 191, 162, 0.18), rgba(184, 220, 235, 0.28));
   color: var(--secondary-color);
 }
 
 #donate,
 #contact {
   background: var(--surface-color);
-  border: 2px solid rgba(77, 175, 228, 0.18);
+  border: 1px solid rgba(110, 168, 199, 0.22);
   color: var(--text-color);
 }
 
@@ -201,6 +314,27 @@ body {
   font-size: 1.08rem;
   line-height: 1.8;
   margin-bottom: 0.85rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.gallery-card {
+  min-height: 180px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 24px;
+  border: 2px dashed rgba(110, 168, 199, 0.4);
+  background: linear-gradient(180deg, var(--surface-soft), var(--surface-color));
+  color: var(--secondary-color);
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
 }
 
 .simple-form {
@@ -280,6 +414,7 @@ body {
   }
 
   #volunteer,
+  #gallery,
   #donate,
   #impact,
   #contact {
@@ -287,7 +422,20 @@ body {
     padding: 28px 22px;
   }
 
+  #mission,
+  #programs {
+    margin: 18px 16px;
+    padding: 28px 22px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
   #volunteer h2,
+  #mission h2,
+  #programs h2,
+  #gallery h2,
   #donate h2,
   #impact h2,
   #contact h2 {
