@@ -54,6 +54,12 @@ body {
   color: var(--accent-color2) !important;
 }
 
+.current-link {
+  color: #dff2fb !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
 .intro {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: var(--light-text);
@@ -66,6 +72,40 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   align-items: center;
+}
+
+.subpage-hero {
+  max-width: 980px;
+  margin: 96px auto 28px;
+  padding: 52px 42px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, var(--surface-color), var(--surface-soft));
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.subpage-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  color: var(--secondary-color);
+  margin-bottom: 14px;
+}
+
+.subpage-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.subpage-tag {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-color2);
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .intro:hover {
@@ -453,6 +493,11 @@ body {
     border-radius: 40px;
     margin-top: 70px;
     grid-template-columns: 1fr;
+  }
+
+  .subpage-hero {
+    margin: 76px 16px 18px;
+    padding: 36px 22px;
   }
 
   .intro h1 {
