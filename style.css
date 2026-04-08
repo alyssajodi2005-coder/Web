@@ -86,7 +86,7 @@ body {
 .intro {
   background:
     radial-gradient(circle at 15% 20%, rgba(255, 249, 239, 0.16), transparent 18%),
-    linear-gradient(135deg, #c9e7d5 0%, #b4dde0 48%, #729d98 100%);
+    linear-gradient(135deg, #ace2c1 0%, #67ab97 48%, #709d98 100%);
   color: var(--light-text);
   text-align: center;
   padding: 92px 44px 88px;
