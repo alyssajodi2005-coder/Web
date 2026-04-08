@@ -91,9 +91,9 @@ body {
   text-align: center;
   padding: 92px 44px 88px;
   min-height: 360px;
-  max-width: 1120px;
   width: 100%;
-  margin: 0 0 28px;
+  max-width: none;
+  margin: 0 0 28px 0;
   box-shadow: var(--shadow-soft);
   display: flex;
   align-items: center;
@@ -483,7 +483,7 @@ body {
 @media (max-width: 768px) {
   .intro {
     padding: 70px 22px;
-    margin: 70px 16px 18px;
+    margin: 70px 0 18px 0;
     min-height: 300px;
   }
 
