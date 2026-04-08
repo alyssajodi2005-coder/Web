@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #8ebfa2;
-  --secondary-color: #486a40;
+  --primary-color: #aad8c0;
+  --secondary-color: #5c8f8a;
   --accent-color: #b8dceb;
   --accent-color2: #6ea8c7;
-  --card-color: #7ea99a;
+  --card-color: #8ec0b4;
   --surface-color: #fff9ef;
   --surface-soft: #eef5f1;
   --text-color: #333;
@@ -61,59 +61,49 @@ body {
 }
 
 .intro {
-  background: linear-gradient(170deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #c5e5d3 0%, #a8d7d5 45%, #6f9f99 100%);
   color: var(--light-text);
   text-align: center;
-  padding: 95px;
+  padding: 88px 44px;
+  max-width: 1120px;
+  margin: 42px auto 28px;
+  border-radius: 42px;
+  box-shadow: var(--shadow-soft);
 }
 
 .intro h1 {
   font-family: "Playfair Display", serif;
-  font-size: 80px;
+  font-size: clamp(3rem, 6vw, 5.1rem);
+  line-height: 1.04;
+  margin-bottom: 18px;
 }
 
 .intro p {
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
-}
-
-.subpage-hero {
-  max-width: 980px;
-  margin: 96px auto 28px;
-  padding: 52px 42px;
-  border-radius: 32px;
-  background: linear-gradient(135deg, var(--surface-color), var(--surface-soft));
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-}
-
-.subpage-hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.3rem, 4vw, 3.5rem);
-  color: var(--secondary-color);
-  margin-bottom: 14px;
-}
-
-.subpage-hero p {
-  max-width: 720px;
-  margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
 }
 
 .subpage-tag {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent-color2);
-  font-size: 0.88rem;
+  color: rgba(255, 250, 240, 0.92);
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
 .statement {
-  max-width: 520px;
+  max-width: 760px;
   margin: 0 auto;
+}
+
+.statement-wide {
+  max-width: 980px;
+}
+
+.subpage-intro {
+  margin-top: 88px;
 }
 
 
@@ -282,7 +272,7 @@ body {
 
 #volunteer,
 #impact {
-  background: linear-gradient(135deg, rgba(142, 191, 162, 0.18), rgba(184, 220, 235, 0.28));
+  background: linear-gradient(135deg, rgba(170, 216, 192, 0.22), rgba(184, 220, 235, 0.3));
   color: var(--secondary-color);
 }
 
@@ -386,14 +376,9 @@ body {
 
 @media (max-width: 768px) {
   .intro {
-    padding: 90px 20px;
-    border-radius: 40px;
+    padding: 70px 22px;
+    border-radius: 28px;
     margin: 70px 16px 18px;
-  }
-
-  .subpage-hero {
-    margin: 76px 16px 18px;
-    padding: 36px 22px;
   }
 
   .intro h1 {
