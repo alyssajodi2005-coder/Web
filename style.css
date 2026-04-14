@@ -291,6 +291,45 @@ body {
   text-align: center;
 }
 
+.quote-panel,
+.logo-panel,
+.photo-panel {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quote-panel blockquote {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--secondary-color);
+}
+
+.quote-panel p,
+.logo-panel p {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.panel-logo {
+  width: min(100%, 220px);
+  height: auto;
+  display: block;
+}
+
+.panel-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: var(--shadow-card);
+}
+
 .placeholder-carousel {
   margin-top: 24px;
 }
@@ -318,6 +357,35 @@ body {
   object-fit: cover;
   border-radius: 28px;
   box-shadow: var(--shadow-card);
+}
+
+.quote-slide,
+.logo-slide {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quote-slide blockquote {
+  margin: 0;
+  max-width: 760px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.quote-slide p,
+.logo-slide p {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.carousel-logo {
+  width: min(100%, 220px);
+  height: auto;
+  display: block;
 }
 
 .image-one {
