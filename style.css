@@ -144,27 +144,66 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+  max-width: 980px;
 }
 
 .info-card {
   background: rgba(255, 249, 239, 0.92);
   border: 1px solid var(--border-color);
   border-radius: 24px;
-  padding: 28px 24px;
+  padding: 20px 18px;
   box-shadow: var(--shadow-card);
+  text-align: center;
+  min-height: 135px;
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(72, 106, 64, 0.16);
 }
 
 .info-card h2 {
   font-family: "Playfair Display", serif;
   color: var(--secondary-color);
-  font-size: 1.5rem;
-  margin-bottom: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
 .info-card p {
   font-family: "Lato", sans-serif;
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.6;
   margin: 0;
+}
+
+.site-modal {
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+}
+
+.site-modal .modal-header {
+  border-bottom: 1px solid rgba(72, 106, 64, 0.12);
+  padding: 20px 24px 12px;
+}
+
+.site-modal .modal-title {
+  font-family: "Playfair Display", serif;
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+}
+
+.site-modal .modal-body {
+  padding: 12px 24px 24px;
+}
+
+.site-modal .modal-body p {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+  margin-bottom: 12px;
 }
 
 .page-section,
@@ -283,44 +322,7 @@ body {
     linear-gradient(135deg, #cee7dc 0%, #9dc7db 52%, #7da9a1 100%);
 }
 
-.btn-donate {
-  background-color: var(--accent-color2);
-  color: var(--light-text);
-  font-weight: 700;
-  padding: 5px 25px;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  border: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
 
-.btn-donate:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  cursor: pointer;
-}
-
-.btn-learn,
-.btn-form {
-  background-color: var(--accent-color2);
-  color: var(--light-text);
-  font-weight: 700;
-  padding: 16px 30px;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  border: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-learn:hover,
-.btn-form:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  background-color: var(--accent-color);
-  color: var(--text-color);
-}
 
 #cards {
   display: flex;
@@ -436,7 +438,7 @@ body {
 
 #footer {
   margin-top: 40px;
-  background: var(--secondary-color);
+  background: rgba(72, 106, 64, 0.95);
   color: var(--light-text);
   text-align: center;
   padding: 24px 20px;
